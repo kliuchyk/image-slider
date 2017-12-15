@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow</title>
+</head>
+<body>
+    <img name="slide">
+    <script>
+        let i = 0;
+        const images = [];
+
+        images[0] = 'image1.jpg';
+        images[1] = 'image2.jpg';
+        images[2] = 'image3.jpg';
+        images[3] = 'image4.jpg';
+        images[4] = 'image5.jpg';
+
+        function changeImg() {
+            document.slide.src = images[i];
+
+            i < images.length -1 ? i++ : i = 0;
+
+            setTimeout('changeImg()', 2000);
+        }
+
+        changeImg();
+    </script>
+</body>
+</html>
